@@ -2,7 +2,7 @@ const axios = require("axios");
 
 exports.handler = async (event, context) => {
   const queryType = "Bestseller";
-  const aladinApiUrl = `https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${secrets.REACT_APP_ALADIN_API_KEY}&QueryType=${queryType}&MaxResults=100&start=1&SearchTarget=Book&output=js&Cover=Big&CategoryId&Version=20131101`;
+  const aladinApiUrl = `https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${process.env.REACT_APP_ALADIN_API_KEY}&QueryType=${queryType}&MaxResults=100&start=1&SearchTarget=Book&output=js&Cover=Big&CategoryId&Version=20131101`;
 
   try {
     const response = await axios.get(aladinApiUrl);

@@ -1,8 +1,8 @@
 const axios = require("axios");
 
-const aladinApiKey = secrets.REACT_APP_ALADIN_API_KEY;
-const naverClientId = secrets.REACT_APP_NAVER_CLIENT_ID;
-const naverClientSecret = secrets.REACT_APP_NAVER_CLIENT_SECRET;
+const aladinApiKey = process.env.REACT_APP_ALADIN_API_KEY;
+const naverClientId = process.env.REACT_APP_NAVER_CLIENT_ID;
+const naverClientSecret = process.env.REACT_APP_NAVER_CLIENT_SECRET;
 const aladinApiBaseUrl = "https://www.aladin.co.kr/ttb/api/ItemList.aspx";
 const aladinApiSearchUrl = "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx";
 const aladinApiLookUpUrl = "http://www.aladin.co.kr/ttb/api/ItemLookUp.aspx";
